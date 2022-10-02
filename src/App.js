@@ -41,7 +41,7 @@ class WhoAmi extends Component {
   }
 
 
-  commitInputChanges = (e) => {
+  commitInputChanges = (e, color) => {
     this.setState({
       position: e.target.value
     })
@@ -59,7 +59,7 @@ class WhoAmi extends Component {
         <a href={link}>My Profile</a>
         <form>
           <span>Введите должность</span>
-          <input type='text' onChange={(e) => this.commitInputChanges()} />
+          <input type='text' onChange={(e) => this.commitInputChanges(e, 'some color')} />
         </form>
       </div>
     )
